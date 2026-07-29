@@ -54,19 +54,12 @@ $$b := b - \alpha \frac{\partial J}{\partial b}$$
 
 After running gradient descent for $100$ iterations with a learning rate of $\alpha = 0.01$, the model successfully learns the underlying linear relationship:
 
-| Linear Fit Line | Loss Curve |
+| Linear Fit Line 
 | :---: | :---: |
-| ![Fitted Line](assets/fit_plot.png) | ![Cost Curve](assets/loss_plot.png) |
+| <img width="898" height="597" alt="image" src="https://github.com/user-attachments/assets/12c559bc-bca1-46c4-95f0-07baae326d20" />
 
-*(Note: Replace the image paths above with saved plots from your project, e.g., `plt.savefig('assets/fit_plot.png')`)*
 
----
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure you have Python installed. You can install the required dependencies using:
 
 ```bash
 pip install -r requirements.txt
