@@ -1,62 +1,60 @@
 # Linear Regression from Scratch in Python
 
-A pure NumPy implementation of **Linear Regression** trained via Gradient Descent from scratch, without relying on high-level machine learning libraries like `scikit-learn`.
+A simple NumPy implementation of Linear Regression trained with Gradient Descent, no scikit-learn or other ML libraries involved.
 
----
+## Overview
 
-##  Overview
+I built this to really understand what's happening under the hood when a model "learns." Instead of calling `.fit()` on some library, everything here is done manually with vectorized NumPy operations — the hypothesis function, the cost function, and the gradient descent updates.
 
-This project implements a foundational supervised learning algorithm—Linear Regression—built entirely from first principles. The goal of this project is to provide a clear, transparent look into how parameter optimization works under the hood using vectorization and gradient descent.
+### Features
 
-### Key Features
-* **Zero ML Dependencies:** Built strictly using **NumPy** for linear algebra operations and **Matplotlib** for visualization.
-* **Gradient Descent Optimization:** Iterative parameter update step-by-step.
-* **Loss Tracking:** Monitors Mean Squared Error (MSE) over iterations to track convergence.
+- No ML dependencies — just NumPy for the math and Matplotlib for plotting
+- Gradient descent implemented step by step
+- Tracks MSE loss over iterations so you can see it converge
 
----
+## The Math
 
-##  Mathematical Formulation
+### Hypothesis Function
 
-### 1. Hypothesis Function
-The hypothesis predicts a target value $\hat{y}$ given input feature $x$:
+The model predicts `y_hat` from input `x` using:
 
-$$h_\theta(x) = w \cdot x + b$$
+```
+h(x) = w * x + b
+```
 
-Where:
-* $w$ = Weight parameter (slope)
-* $b$ = Bias parameter (intercept)
+- `w` — weight (slope)
+- `b` — bias (intercept)
 
-### 2. Cost Function (Mean Squared Error)
-We measure the error between predictions $\hat{y}$ and true values $y$ using MSE:
+### Cost Function (MSE)
 
-$$J(w, b) = \frac{1}{n} \sum_{i=1}^{n} (y_i - (w x_i + b))^2$$
+```
+J(w, b) = (1/n) * sum((y_i - (w*x_i + b))^2)
+```
 
-### 3. Gradient Descent Updates
-At each iteration, parameters are updated in the direction of steepest descent:
+### Gradient Descent
 
-$$\frac{\partial J}{\partial w} = -\frac{2}{n} \sum_{i=1}^{n} x_i (y_i - \hat{y}_i)$$
+Gradients:
 
-$$\frac{\partial J}{\partial b} = -\frac{2}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)$$
+```
+dJ/dw = -(2/n) * sum(x_i * (y_i - y_hat_i))
+dJ/db = -(2/n) * sum(y_i - y_hat_i)
+```
 
-Parameter update rule:
-$$w := w - \alpha \frac{\partial J}{\partial w}$$
-$$b := b - \alpha \frac{\partial J}{\partial b}$$
+Update rule (alpha = learning rate):
 
-(where alpha is the learning rate)
+```
+w = w - alpha * dJ/dw
+b = b - alpha * dJ/db
+```
 
----
+## Results
 
-##  Results & Visualizations
+Ran for 100 iterations at a learning rate of 0.01, and it picks up the underlying linear trend pretty well:
 
-After running gradient descent for 100 iterations with a learning rate of $\alpha = 0.01$, the model successfully learns the underlying linear relationship:
-
-| Linear Fit Line 
-
-| <img width="898" height="597" alt="image" src="https://github.com/user-attachments/assets/12c559bc-bca1-46c4-95f0-07baae326d20" />
-
-
+![Linear Fit Line](https://github.com/user-attachments/assets/12c559bc-bca1-46c4-95f0-07baae326d20)
 
 
 
 ```bash
 pip install -r requirements.txt
+```
