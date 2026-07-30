@@ -42,7 +42,7 @@ Parameter update rule:
 $$w := w - \alpha \frac{\partial J}{\partial w}$$
 $$b := b - \alpha \frac{\partial J}{\partial b}$$
 
-*(where $\alpha$ is the learning rate)*
+(where alpha is the learning rate)
 
 ---
 
