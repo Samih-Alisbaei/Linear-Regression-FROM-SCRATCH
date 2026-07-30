@@ -48,11 +48,12 @@ $$b := b - \alpha \frac{\partial J}{\partial b}$$
 
 ##  Results & Visualizations
 
-After running gradient descent for $100$ iterations with a learning rate of $\alpha = 0.01$, the model successfully learns the underlying linear relationship:
+After running gradient descent for 100 iterations with a learning rate of $\alpha = 0.01$, the model successfully learns the underlying linear relationship:
 
 | Linear Fit Line 
-| :---: | :---: |
+
 | <img width="898" height="597" alt="image" src="https://github.com/user-attachments/assets/12c559bc-bca1-46c4-95f0-07baae326d20" />
+
 
 
 
