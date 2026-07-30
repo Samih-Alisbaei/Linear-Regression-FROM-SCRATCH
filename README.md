@@ -48,13 +48,13 @@ b = b - alpha * dJ/db
 ```
 
 ## Results
+As you can see, every iteration, the cost converges :
 
-Ran for 100 iterations at a learning rate of 0.01, and it picks up the underlying linear trend pretty well:
+
+<img width="652" height="727" alt="image" src="https://github.com/user-attachments/assets/13107e72-155b-4b34-a1f9-52a1e742d6d8" />
+
+
+Ran for 200 iterations at a learning rate of 0.01, and it picks up the underlying linear trend pretty well:
 
 ![Linear Fit Line](https://github.com/user-attachments/assets/12c559bc-bca1-46c4-95f0-07baae326d20)
 
-
-
-```bash
-pip install -r requirements.txt
-```
