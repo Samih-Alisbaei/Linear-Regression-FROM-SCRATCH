@@ -1,14 +1,10 @@
 # Linear Regression from Scratch in Python
 
-A pure **NumPy** implementation of **Linear Regression** trained via **Gradient Descent** from scratch, without relying on high-level machine learning libraries like `scikit-learn`.
-
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![NumPy](https://img.shields.io/badge/NumPy-1.20%2B-013243)
-![License](https://img.shields.io/badge/License-MIT-green)
+A pure NumPy implementation of **Linear Regression** trained via Gradient Descent from scratch, without relying on high-level machine learning libraries like `scikit-learn`.
 
 ---
 
-## 📌 Overview
+##  Overview
 
 This project implements a foundational supervised learning algorithm—Linear Regression—built entirely from first principles. The goal of this project is to provide a clear, transparent look into how parameter optimization works under the hood using vectorization and gradient descent.
 
@@ -19,7 +15,7 @@ This project implements a foundational supervised learning algorithm—Linear Re
 
 ---
 
-## 📐 Mathematical Formulation
+##  Mathematical Formulation
 
 ### 1. Hypothesis Function
 The hypothesis predicts a target value $\hat{y}$ given input feature $x$:
@@ -50,7 +46,7 @@ $$b := b - \alpha \frac{\partial J}{\partial b}$$
 
 ---
 
-## 📊 Results & Visualizations
+##  Results & Visualizations
 
 After running gradient descent for $100$ iterations with a learning rate of $\alpha = 0.01$, the model successfully learns the underlying linear relationship:
 
